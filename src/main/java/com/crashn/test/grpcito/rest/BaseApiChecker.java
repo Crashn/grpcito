@@ -22,4 +22,11 @@ public class BaseApiChecker {
         service.check(data);
         return "done";
     }
+
+    @GetMapping("/")
+    public String root() {
+        RequestData data = new RequestData("default test message", "inner_test_11", UUID.randomUUID().toString());
+        service.check(data);
+        return "done(default)";
+    }
 }
